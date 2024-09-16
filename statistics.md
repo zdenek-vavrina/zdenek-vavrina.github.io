@@ -1,5 +1,4 @@
 # Quick Sum Up of Statistical Tests
-## *Zdenek Vavrina*
 
 ---
 
