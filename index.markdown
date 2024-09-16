@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
+## Personal pages with handy tools:
 
-# Zdenek Vavrina
-
-[Quick Sum Up of Statistical Tests](https://username.github.io/statistics).
+1. [Quick Sum Up of Statistical Tests](https://zdenek-vavrina.github.io/statistics)

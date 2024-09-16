@@ -1,8 +1,8 @@
----
+<!-- ---
 layout: default
-title: statistics
+title: Statistics
 ---
-
+ -->
 
 # Quick Sum Up of Statistical Tests
 ## *Zdenek Vavrina*
@@ -23,17 +23,17 @@ This summary provides a quick reference for conducting various statistical tests
 
 ### Statistical Tests for Comparing Group Means
 
-- **Between Two Groups**
+- #### Between Two Groups
   - **[One Sample T-test](#one-sample-t-test)**
   - **[Two Sample T-test](#two-sample-t-test)**
   - **[Paired Sample T-test](#paired-sample-t-test)**
   - **[Paired Z-test](#paired-z-test)**
 
-- **Between More Than Two Groups**
+- #### Between More Than Two Groups
   - **[One-Way ANOVA](#one-way-anova)**
   - **[Two-Way ANOVA](#two-way-anova)**
 
-- **Non-Parametric Tests for Comparing Means**
+- #### Non-Parametric Tests for Comparing Means
   - **[Kruskal-Wallis H-test](#kruskal-wallis-h-test)**
   - **[Friedman Test](#friedman-test)**
 
