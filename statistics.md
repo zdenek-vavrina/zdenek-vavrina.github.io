@@ -1,9 +1,3 @@
-<!-- ---
-layout: default
-title: Statistics
----
- -->
-
 # Quick Sum Up of Statistical Tests
 ## *Zdenek Vavrina*
 
