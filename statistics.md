@@ -65,54 +65,21 @@ This summary provides a quick reference for conducting various statistical tests
 - Descriptive statistics summarize and describe the main features of a dataset
 - Includes such measures as mean, median, standard deviation, and range.
 
-### R Code (for data.frame)
-```r
-# Load necessary library
-library(dplyr)
-
-# Example data: replace with your actual data
-data <- data.frame(
-  group = factor(rep(c("Group1", "Group2", "Group3"), each = 10)),
-  value = rnorm(30)  # Generates 30 random normal values
-)
-
-# Descriptive statistics
-summary_stats <- data %>%
-  group_by(group) %>%
-  summarise(
-    mean = mean(value),
-    median = median(value),
-    sd = sd(value),
-    min = min(value),
-    max = max(value),
-    n = n()
-  )
-
-# Print the results
-print(summary_stats)
-```
-
-### R Code (for tibble)
+### R Code
 ```r
 # Load necessary libraries
 library(dplyr)
 library(tibble)
 
-# Example data: replace with your actual data
-data <- tibble(
-  group = factor(rep(c("Group1", "Group2", "Group3"), each = 10)),
-  value = rnorm(30)  # Generates 30 random normal values
-)
-
 # Descriptive statistics
 summary_stats <- data %>%
   group_by(group) %>%
   summarise(
-    mean = mean(value),
-    median = median(value),
-    sd = sd(value),
-    min = min(value),
-    max = max(value),
+    mean = mean(LEC, na.rm = TRUE),
+    median = median(LEC, na.rm = TRUE),
+    sd = sd(LEC, na.rm = TRUE),
+    min = min(LEC, na.rm = TRUE),
+    max = max(LEC, na.rm = TRUE),
     n = n()
   )
 
@@ -123,16 +90,12 @@ print(summary_stats)
 ### Python Code (for pandas DataFrame)
 ```python
 import pandas as pd
-import numpy as np
 
-# Example data: replace with your actual data
-data = pd.DataFrame({
-    'group': np.repeat(['Group1', 'Group2', 'Group3'], 10),
-    'value': np.random.randn(30)  # Generates 30 random normal values
-})
+# Remove rows with NaN values in 'value' column
+data_clean = data.dropna(subset=['value'])
 
 # Descriptive statistics
-summary_stats = data.groupby('group').agg(
+summary_stats = data_clean.groupby('group').agg(
     mean=('value', 'mean'),
     median=('value', 'median'),
     sd=('value', 'std'),
@@ -141,7 +104,6 @@ summary_stats = data.groupby('group').agg(
     n=('value', 'size')
 ).reset_index()
 
-# Print the results
 print(summary_stats)
 ```
 [↑ Back to Top](#statistical-tests)
